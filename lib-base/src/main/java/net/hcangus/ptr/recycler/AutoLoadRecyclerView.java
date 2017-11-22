@@ -32,7 +32,6 @@ import java.util.Collection;
 
 
 /**
- * SCRM
  * <p/>
  * 能够自动加载和添加Header、Footer的RecyclerView。
  * Created by Administrator on 2017/3/30.

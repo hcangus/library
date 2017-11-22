@@ -264,4 +264,13 @@
 		<!-- View background -->
 		<attr name="android:background"/>
 	</declare-styleable>
+
+	<!-- 更多，收起 可折叠textview -->
+	<declare-styleable name="FolderTextView">
+		<attr name="foldText" format="string"/>
+		<attr name="unFoldText" format="string"/>
+		<attr name="foldLine" format="integer"/>
+		<attr name="tailTextColor" format="color"/>
+		<attr name="canFoldAgain" format="boolean"/>
+	</declare-styleable>
 </resources>

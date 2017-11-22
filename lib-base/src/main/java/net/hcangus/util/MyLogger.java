@@ -6,7 +6,6 @@ import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
 
 /**
- * Anydoor
  * @see Logger#i(String, Object...)
  * @see Logger#d(Object)
  * @see Logger#d(String, Object...)
