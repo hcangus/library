@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  xmlns:app="http://schemas.android.com/apk/res-auto"
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:background="@drawable/bg_tips"
+			  android:gravity="center"
+			  android:minHeight="120dp"
+			  android:orientation="vertical"
+			  android:minWidth="120dp"
+			  android:padding="15dp">
+
+
+	<ImageView
+		android:id="@+id/ivBigLoading"
+		android:layout_width="60dp"
+		android:layout_height="60dp"
+		android:contentDescription="@null"
+		android:scaleType="fitCenter"
+		android:visibility="gone"/>
+
+	<ImageView
+		android:id="@+id/ivSmallLoading"
+		android:layout_width="60dp"
+		android:layout_height="60dp"
+		android:contentDescription="@null"
+		android:scaleType="centerInside"
+		android:visibility="gone"/>
+
+	<net.hcangus.tips.TipProgressBar
+		android:id="@+id/circleProgressBar"
+		android:layout_width="60dp"
+		android:layout_height="60dp"
+		android:visibility="gone"
+		app:svprogress_roundColor="#e5e5e5"
+		app:svprogress_roundProgressColor="@android:color/black"
+		app:svprogress_roundWidth="2dip"/>
+
+	<TextView
+		android:id="@+id/tvMsg"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:gravity="center"
+		android:textColor="@android:color/black"
+		android:textSize="15sp"
+		android:visibility="gone"/>
+
+</LinearLayout>

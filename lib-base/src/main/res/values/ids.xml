@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--与AssortView搭配使用显示选择项的id-->
+	<item name="floating_header" type="id"/>
+
+	<!--PtrAutoLoadView-->
+	<item name="ptr_autoload_recyclerView" type="id"/>
+	<item name="autoload_recyclerView" type="id"/>
+	<item name="ptrFrame" type="id"/>
+
+	<!--TitleBar-->
+	<item name="titleBar" type="id"/>
+	<item name="content" type="id"/>
+
+	<!--layout_banner-->
+	<item name="bannerContainer" type="id"/>
+	<item name="bannerViewPager" type="id"/>
+	<item name="circleIndicator" type="id"/>
+	<item name="numIndicator" type="id"/>
+	<item name="titleView" type="id"/>
+	<item name="bannerTitle" type="id"/>
+	<item name="numIndicatorInside" type="id"/>
+	<item name="indicatorInside" type="id"/>
+	<item name="indicatorBelow" type="id"/>
+
+	<!--TabView-->
+	<item type="id" name="tag_position"/>
+	<item type="id" name="id_tab_txt">888</item>
+</resources>

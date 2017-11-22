@@ -1,0 +1,42 @@
+<LinearLayout android:id="@+id/id_loading_and_retry"
+			  xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:background="@color/c_bg_white"
+			  android:gravity="center_horizontal"
+			  android:orientation="vertical">
+
+	<ImageView
+		android:id="@+id/img_nonet"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="60dp"
+		android:contentDescription="@null"
+		android:src="@mipmap/ic_no_network"/>
+
+	<TextView
+		android:id="@+id/tv_nonet"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_marginBottom="30dp"
+		android:layout_marginLeft="56dp"
+		android:layout_marginRight="56dp"
+		android:layout_marginTop="30dp"
+		android:gravity="center"
+		android:lineSpacingExtra="8dp"
+		android:text="@string/base_nonet_desc"
+		android:textColor="@color/c_font_error"
+		android:textSize="@dimen/s_content"/>
+
+	<Button
+		android:id="@+id/retry_btn"
+		android:layout_width="wrap_content"
+		android:layout_height="40dp"
+		android:layout_marginBottom="60dp"
+		android:background="@drawable/selector_default_stroke1_rc1"
+		android:text="@string/base_retry_btn"
+		android:textColor="@color/c_font_default"
+		android:textSize="@dimen/s_content"/>
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/errorStateRelativeLayout"
+			  xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:background="@color/c_bg_white"
+			  android:gravity="center_horizontal"
+			  android:orientation="vertical">
+
+	<ImageView
+		android:id="@+id/retry_image"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginLeft="16dp"
+		android:layout_marginRight="16dp"
+		android:layout_marginTop="60dp"
+		android:contentDescription="@null"
+		android:src="@mipmap/ic_nodata"/>
+
+	<TextView
+		android:id="@+id/retry_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="60dp"
+		android:layout_marginLeft="56dp"
+		android:layout_marginRight="56dp"
+		android:layout_marginTop="30dp"
+		android:gravity="center"
+		android:lineSpacingExtra="5.5dp"
+		android:text="@string/base_retry_desc"
+		android:textColor="@color/c_font_error"
+		android:textSize="@dimen/s_content"/>
+</LinearLayout>

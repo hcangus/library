@@ -1,0 +1,69 @@
+<resources>
+
+	<dimen name="height_titlebar">44dp</dimen>
+
+	<!--文字大小-->
+	<dimen name="s_title">17sp</dimen>
+	<dimen name="s_content">15sp</dimen>
+	<dimen name="s_normal">14sp</dimen>
+	<dimen name="s_small">14sp</dimen>
+	<!--圆角弧度-->
+	<dimen name="r_big">4dp</dimen>
+	<dimen name="r_small">2.5dp</dimen>
+
+	<!--线条宽度-->
+	<dimen name="line_05dp">0.5dp</dimen><!--线条粗细-->
+	<dimen name="line_1dp">1dp</dimen><!--线条粗细-->
+	<dimen name="line_10dp">10dp</dimen><!--线条粗细-->
+
+	<!--TabView-->
+	<dimen name="psts_dot_wh">10dp</dimen>
+	<dimen name="psts_indicator_circle">4dp</dimen>
+	<dimen name="psts_dot_m_right">9dp</dimen>
+	<dimen name="psts_dot_m_tv_right">8dp</dimen>
+	<dimen name="psts_dot_m_top">7dp</dimen>
+	<dimen name="psts_dot_linelayout_h">23dp</dimen>
+	<dimen name="psts_dot_txt_size">10sp</dimen>
+
+	<!--Tips-->
+	<!--padding-->
+	<dimen name="padding_svprogresshuddefault">15dp</dimen>
+	<!--窗口最小宽度-->
+	<dimen name="size_minwidth_svprogresshuddefault">120dp</dimen>
+	<!--图片宽高-->
+	<!--<dimen name="size_image_bigloading">80dp</dimen>-->
+	<!--图片宽高-->
+	<dimen name="size_image_smallloading">60dp</dimen>
+	<!--圆角-->
+	<dimen name="radius_svprogresshuddefault">25px</dimen>
+	<!--提示的文字大小-->
+	<dimen name="textSize_svprogresshuddefault_msg">15sp</dimen>
+	<dimen name="margintop_svprogresshuddefault_msg">10dp</dimen>
+
+	<!--SegmentedGroup-->
+	<dimen name="radio_button_conner_radius">5dp</dimen>
+	<dimen name="radio_button_stroke_border">1dp</dimen>
+
+	<!--Keyboard-->
+	<dimen name="min_panel_height">220dp</dimen>
+	<dimen name="max_panel_height">380dp</dimen>
+	<dimen name="min_keyboard_height">80dp</dimen>
+
+    <!-- 顶部按钮栏高度 -->
+    <dimen name="pickerview_topbar_height">44dp</dimen>
+    <!-- 顶部按钮padding -->
+    <dimen name="pickerview_topbar_padding">20dp</dimen>
+
+    <!-- 顶部按钮文字大小 -->
+    <dimen name="pickerview_topbar_btn_textsize">17sp</dimen>
+    <dimen name="pickerview_topbar_title_textsize">18sp</dimen>
+    <!-- 选项文字大小 需要配合 bools.xml 的 pickerview_customTextSize 为 true 才有效果-->
+    <dimen name="pickerview_textsize">20sp</dimen>
+
+	<!--ShadowLayout-->
+	<dimen name="default_corner_radius">4dp</dimen>
+	<dimen name="default_shadow_radius">4dp</dimen>
+
+	<!--TagFlowLayout-->
+	<dimen name="tfl_space">4dp</dimen>
+</resources>

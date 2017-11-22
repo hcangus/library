@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="style_custom_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否漂现在activity上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 去除黑色边框的关键设置项 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 屏幕背景是否变暗 -->
+        <item name="android:backgroundDimAmount">0.3</item>
+    </style>
+
+	<!-- 背景半透明样式 -->
+	<style name="style_dialogTranslucent">
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:backgroundDimEnabled">true</item>
+		<item name="android:windowFullscreen">true</item>
+	</style>
+
+	<!-- 灰色线条间隔  0.5dp高度 -->
+	<style name="sty_view_line5_05dpH">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">@dimen/line_05dp</item>
+		<item name="android:background">@color/c_divider_1</item>
+	</style>
+
+	<!-- 灰色线条间隔  0.5dp高度 -->
+	<style name="sty_view_line6_05dpH">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">@dimen/line_05dp</item>
+		<item name="android:background">@color/c_divider_2</item>
+	</style>
+
+	<!-- 网页进度条 -->
+	<style name="ProgressBar_Mini" parent="@android:style/Widget.ProgressBar.Horizontal">
+		<item name="android:maxHeight">50dip</item>
+		<item name="android:minHeight">8dip</item>
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+		<item name="android:progressDrawable">@drawable/progressbar_mini</item>
+	</style>
+
+	<style name="editTextStyle">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">26dp</item>
+		<item name="android:background">@drawable/bg_search_normal</item>
+		<item name="android:drawablePadding">6dp</item>
+		<item name="android:gravity">center_vertical</item>
+		<item name="android:imeOptions">actionSearch</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:textSize">@dimen/s_normal</item>
+		<item name="android:textColor">@color/c_font_hint</item>
+		<item name="android:hint">@string/search</item>
+	</style>
+
+</resources>

@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+
+android {
+	compileSdkVersion 25
+	buildToolsVersion "26.0.2"
+
+	defaultConfig {
+		minSdkVersion 15
+		targetSdkVersion 25
+		versionCode 1
+		versionName "1.0"
+
+		testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+	}
+	buildTypes {
+		release {
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+		}
+	}
+}
+
+dependencies {
+	compile fileTree(include: ['*.jar'], dir: 'libs')
+	compile 'com.android.support:appcompat-v7:25.4.0'
+	testCompile 'junit:junit:4.12'
+	compile 'com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE'
+	compile 'com.android.support:recyclerview-v7:25.4.0'
+	compile 'com.android.support:design:25.4.0'
+	//	网络请求
+	compile 'com.android.volley:volley:1.0.0'
+	//  Gson
+	compile 'com.google.code.gson:gson:2.8.0'
+	//	butterknife
+	compile 'com.jakewharton:butterknife:8.5.1'
+	annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+	//Glide & transformation
+	compile 'com.github.bumptech.glide:glide:3.8.0'
+	compile 'jp.wasabeef:glide-transformations:2.0.2'
+	//拼音工具
+	compile 'com.github.stuxuhai:jpinyin:1.1.8'
+	compile 'com.orhanobut:logger:2.1.1'
+}

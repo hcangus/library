@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="pickerview">
+        <attr name="pickerview_gravity">
+            <enum name="center" value="17"/>
+            <enum name="left" value="3"/>
+            <enum name="right" value="5"/>
+        </attr>
+        <attr name="pickerview_textSize" format="dimension"/>
+        <attr name="pickerview_textColorOut" format="color"/>
+        <attr name="pickerview_textColorCenter" format="color"/>
+        <attr name="pickerview_dividerColor" format="color"/>
+        <attr name="pickerview_lineSpacingMultiplier" format="float"/>
+    </declare-styleable>
+
+	<!--Tips-->
+	<declare-styleable name="TipProgressBar">
+		<attr name="svprogress_roundColor" format="color"/>
+		<attr name="svprogress_roundProgressColor" format="color"/>
+		<attr name="svprogress_roundWidth" format="dimension"/>
+		<attr name="svprogress_max" format="integer"/>
+		<attr name="svprogress_style">
+			<enum name="STROKE" value="0"/>
+			<enum name="FILL" value="1"/>
+		</attr>
+	</declare-styleable>
+
+	<!--layout_banner-->
+	<declare-styleable name="Banner">
+		<attr name="delay_time" format="integer" />
+		<attr name="scroll_time" format="integer" />
+		<attr name="is_auto_play" format="boolean" />
+		<attr name="title_background" format="color|reference" />
+		<attr name="title_textcolor" format="color" />
+		<attr name="title_textsize" format="dimension" />
+		<attr name="title_height" format="dimension" />
+		<attr name="indicator_width" format="dimension" />
+		<attr name="indicator_height" format="dimension" />
+		<attr name="indicator_margin" format="dimension" />
+		<attr name="indicator_drawable_selected" format="reference" />
+		<attr name="indicator_drawable_unselected" format="reference" />
+		<attr name="layout_id" format="reference"/>
+		<attr name="image_scale_type" format="enum">
+			<enum name="center" value="0" />
+			<enum name="center_crop" value="1" />
+			<enum name="center_inside" value="2" />
+			<enum name="fit_center" value="3" />
+			<enum name="fit_end" value="4" />
+			<enum name="fit_start" value="5" />
+			<enum name="fit_xy" value="6" />
+			<enum name="matrix" value="7" />
+		</attr>
+		<!--<attr name="indicator_animator" format="reference" />-->
+		<!--<attr name="indicator_animator_reverse" format="reference" />-->
+	</declare-styleable>
+
+	<!--TabView-->
+	<declare-styleable name="AdvancedPagerSlidingTabStrip">
+		<!--导航条的颜色-->
+		<attr name="apTabIndicatorColor" format="color"/>
+		<!--Tab底部下划线的颜色-->
+		<attr name="apTabUnderlineColor" format="color"/>
+		<!--每个Tab之间的分割线颜色-->
+		<attr name="apTabDividerColor" format="color"/>
+		<!--被选中的Tab的文本字体颜色-->
+		<attr name="apTabTextSelectColor" format="color"/>
+		<!--导航条的高度-->
+		<attr name="apTabIndicatorHeight" format="dimension"/>
+		<!--Tab底部下划线的高度-->
+		<attr name="apTabUnderlineHeight" format="dimension"/>
+		<!--Tab分割线的padding-->
+		<attr name="apTabDividerPadding" format="dimension"/>
+		<!--每个Tab的左右padding-->
+		<attr name="apTabPaddingLeftRight" format="dimension"/>
+		<!--每个Tab的上下padding-->
+		<attr name="apTabPaddingTopBottom" format="dimension"/>
+		<!--选中tab的滑动offset-->
+		<attr name="apTabScrollOffset" format="dimension"/>
+		<!--tab的背景-->
+		<attr name="apTabBackground" format="reference"/>
+		<!--伸缩情况，如果为真，每个tab都是相同的weight，默认是false-->
+		<attr name="apTabShouldExpand" format="boolean"/>
+		<!--Tab的文字是否为全部大写，如果是true就全部大写，默认为true-->
+		<attr name="apTabTextAllCaps" format="boolean"/>
+		<!--绘制模式，text或者normal，用于是否将下划线绘制为跟随TextView-->
+		<attr name="apTabDrawMode" format="enum">
+			<enum name="normal" value="0"/>
+			<enum name="text" value="1"/>
+		</attr>
+	</declare-styleable>
+
+	<!-- 圆角图片 属性 -->
+	<declare-styleable name="RoundedImageView">
+		<attr name="riv_corner_radius" format="dimension"/>
+		<attr name="riv_corner_radius_top_left" format="dimension"/>
+		<attr name="riv_corner_radius_top_right" format="dimension"/>
+		<attr name="riv_corner_radius_bottom_left" format="dimension"/>
+		<attr name="riv_corner_radius_bottom_right" format="dimension"/>
+		<attr name="riv_border_width" format="dimension"/>
+		<attr name="riv_border_color" format="color"/>
+		<attr name="riv_mutate_background" format="boolean"/>
+		<attr name="riv_oval" format="boolean"/>
+		<attr name="android:scaleType"/>
+		<attr name="riv_tile_mode">
+			<enum name="clamp" value="0"/>
+			<enum name="repeat" value="1"/>
+			<enum name="mirror" value="2"/>
+		</attr>
+		<attr name="riv_tile_mode_x">
+			<enum name="clamp" value="0"/>
+			<enum name="repeat" value="1"/>
+			<enum name="mirror" value="2"/>
+		</attr>
+		<attr name="riv_tile_mode_y">
+			<enum name="clamp" value="0"/>
+			<enum name="repeat" value="1"/>
+			<enum name="mirror" value="2"/>
+		</attr>
+	</declare-styleable>
+
+	<declare-styleable name="RatioImageView">
+		<!--宽度是否根据src图片的比例来测量（高度已知）-->
+		<attr name="is_width_fix_drawable_size_ratio" format="boolean"/>
+		<!--高度是否根据src图片的比例来测量（宽度已知）-->
+		<attr name="is_height_fix_drawable_size_ratio" format="boolean"/>
+		<!-- 高度设置，参考宽度，如0.5 , 表示 高度＝宽度×０.5 -->
+		<attr name="height_to_width_ratio" format="float"/>
+		<!-- 宽度设置，参考高度，如0.5 , 表示 宽度＝高度×０.5 -->
+		<attr name="width_to_height_ratio" format="float"/>
+	</declare-styleable>
+
+	<declare-styleable name="SimpleRatingBar">
+		<!--Set stars border color in normal state-->
+		<attr name="srb_borderColor" format="color" />
+		<!--Set stars fill color in normal state-->
+		<attr name="srb_fillColor" format="color" />
+		<!--Set background color of rating bar in normal state-->
+		<attr name="srb_backgroundColor" format="color" />
+		<!--Set stars background color in normal state-->
+		<attr name="srb_starBackgroundColor" format="color" />
+		<!--Set background color of rating bar in pressed state-->
+		<attr name="srb_pressedBackgroundColor" format="color" />
+		<!--Set stars border color in pressed state-->
+		<attr name="srb_pressedBorderColor" format="color" />
+		<!--Set stars fill color in pressed state-->
+		<attr name="srb_pressedFillColor" format="color" />
+		<!--Set stars background color in pressed state-->
+		<attr name="srb_pressedStarBackgroundColor" format="color" />
+		<!--Set the number of stars with app:srb_numberOfStars / setNumberOfStars(int)-->
+		<attr name="srb_numberOfStars" format="integer" />
+		<!--Set star size-->
+		<attr name="srb_starSize" format="dimension" />
+		<!--Set max star size-->
+		<attr name="srb_maxStarSize" format="dimension" />
+		<!--Set separation between stars-->
+		<attr name="srb_starsSeparation" format="dimension" />
+		<!--Set border width-->
+		<attr name="srb_starBorderWidth" format="float" />
+		<!--Set stars corner radius-->
+		<attr name="srb_starCornerRadius" format="float" />
+		<!--Enabled/disable user interaction-->
+		<attr name="srb_isIndicator" format="boolean" />
+		<!--Set the rating-->
+		<attr name="srb_rating" format="float" />
+		<!--Set step size-->
+		<attr name="srb_stepSize" format="float" />
+		<!--Enabled/disable border of star-->
+		<attr name="srb_drawBorderEnabled" format="boolean" />
+		<!--Set gravity of fill (left or right)-->
+		<attr name="srb_gravity" format="enum">
+			<enum name="left" value="0"/>
+			<enum name="right" value="1"/>
+		</attr>
+	</declare-styleable>
+
+	<declare-styleable name="LazyViewPager">
+		<attr name="init_lazy_item_offset" format="float" />
+	</declare-styleable>
+
+	<declare-styleable name="KPSwitchPanelLayout">
+		<attr name="ignore_recommend_height" format="boolean" />
+	</declare-styleable>
+
+	<declare-styleable name="SearchEditText">
+		<attr name="isIconLeft" format="boolean"/>
+		<attr name="drawable_delete" format="reference"/>
+		<attr name="isAutoSearch" format="boolean"/>
+	</declare-styleable>
+
+	<declare-styleable name="SegmentedGroup">
+		<attr name="sc_corner_radius" format="dimension" />
+		<attr name="sc_border_width" format="dimension" />
+		<attr name="sc_tint_color" format="color" />
+		<attr name="sc_checked_text_color" format="color" />
+		<attr name="sc_unchecked_tint_color" format="color"/>
+		<attr name="sc_drawable_location" format="enum">
+			<enum name="left" value="0"/>
+			<enum name="top" value="1"/>
+			<enum name="right" value="2"/>
+			<enum name="bottom" value="3"/>
+		</attr>
+	</declare-styleable>
+
+	<declare-styleable name="SearchTitleBar">
+		<attr name="stb_drawableLeft" format="reference|color"/>
+		<attr name="stb_hint" format="string" localization="suggested"/>
+		<attr name="stb_hintColor" format="reference|color"/>
+		<attr name="stb_textColor" format="reference|color"/>
+		<attr name="stb_textSize" format="dimension"/>
+		<attr name="stb_background" format="reference|color"/>
+		<attr name="stb_isAutoSearch" format="boolean"/>
+	</declare-styleable>
+
+	<!--ShadowLayout-->
+	<declare-styleable name="ShadowLayout">
+		<attr name="sl_cornerRadius" format="dimension"/>
+		<attr name="sl_shadowRadius" format="dimension"/>
+		<attr name="sl_shadowColor" format="color"/>
+		<attr name="sl_dx" format="dimension"/>
+		<attr name="sl_dy" format="dimension"/>
+	</declare-styleable>
+
+	<!--侧滑删除-->
+	<declare-styleable name="SwipeMenuLayout">
+		<attr name="swipeEnable" format="boolean"/>
+		<attr name="ios" format="boolean"/>
+		<attr name="leftSwipe" format="boolean"/>
+	</declare-styleable>
+
+	<declare-styleable name="TagFlowLayout">
+		<attr name="auto_select_effect" format="boolean"/>
+		<attr name="tfl_horizontal_space" format="dimension"/>
+		<attr name="tfl_vertical_space" format="dimension"/>
+		<attr name="max_select" format="integer"/>
+		<attr name="gravity">
+			<enum name="left" value="-1" />
+			<enum name="center" value="0" />
+			<enum name="right" value="1" />
+		</attr>
+	</declare-styleable>
+
+	<declare-styleable name="PtrAutoLoadRecyclerView">
+		<attr name="ptr_background" format="reference|color"/>
+	</declare-styleable>
+
+	<declare-styleable name="CirclePageIndicator">
+
+		<!-- Whether or not the indicators should be centered. -->
+		<attr name="centered" format="boolean"/>
+		<!-- Color of the filled circle that represents the current page. -->
+		<attr name="fillColor" format="color"/>
+		<!-- Color of the filled circles that represents pages. -->
+		<attr name="pageColor" format="color"/>
+		<!-- Orientation of the indicator. -->
+		<attr name="android:orientation"/>
+		<!-- Radius of the circles. This is also the spacing between circles. -->
+		<attr name="radius" format="dimension"/>
+		<!-- Whether or not the selected indicator snaps to the circles. -->
+		<attr name="snap" format="boolean"/>
+		<!-- Color of the open circles. -->
+		<attr name="strokeColor" format="color"/>
+		<!-- Width of the stroke used to draw the circles. -->
+		<attr name="strokeWidth" format="dimension"/>
+		<!-- View background -->
+		<attr name="android:background"/>
+	</declare-styleable>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!--背景色-->
+	<color name="c_bg_main">#6dbbf2</color><!--主体色背景 * -->
+	<color name="c_bg_black">#1a1a1a</color><!--黑色背景-->
+	<color name="c_black46">#77000000</color><!-- 46%黑背景色 -->
+	<color name="c_black30">#4d000000</color><!-- 30%黑背景色 -->
+	<color name="c_black50">#80000000</color><!-- 50%黑背景色 -->
+	<color name="c_bg_default">#f2f2f2</color><!--窗口背景1-->
+	<color name="c_bg_white">#ffffff</color><!--白色背景-->
+	<color name="c_bg_white_pressed">#e5e5e5</color><!--白色点击后-->
+	<color name="c_bg_white_disable">#d9d9d9</color><!--不可点击状态-->
+	<!--文字颜色-->
+	<color name="c_font_default">#666666</color>
+	<color name="c_font_error">#999999</color>
+	<color name="c_font_hint">#969699</color>
+	<!--描边分割线颜色-->
+	<color name="c_stroke_1">#666666</color><!--描边3-->
+	<color name="c_stroke_2">#999999</color><!--描边4-->
+	<color name="c_divider_1">#d9d9d9</color><!--分割线1-->
+	<color name="c_divider_2">#eeeeee</color><!--分割线2-->
+
+	<!--TabView-->
+	<color name="background_tab_pressed">#6633B5E5</color>
+	<color name="red">#E43F3E</color>
+
+	<!--SegmentedGroup-->
+	<color name="radio_button_selected_color">#ff33b5e5</color>
+	<color name="radio_button_unselected_color">#00000000</color>
+
+	<color name="pickerview_timebtn_nor">#057dff</color>
+	<color name="pickerview_timebtn_pre">#c2daf5</color>
+	<color name="pickerview_bg_topbar">#f5f5f5</color>
+	<color name="pickerview_topbar_title">#000000</color>
+	<color name="pickerview_wheelview_textcolor_out">#a8a8a8</color>
+	<color name="pickerview_wheelview_textcolor_center">#2a2a2a</color>
+	<color name="pickerview_wheelview_textcolor_divider">#d5d5d5</color>
+	<color name="bgColor_overlay">#60000000</color>
+	<color name="bgColor_default">#FFFFFFFF</color>
+
+	<!--ShadowLayout-->
+	<color name="default_shadow_color">#88757575</color>
+	<color name="default_fill_color">#ffffff</color>
+
+</resources>

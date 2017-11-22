@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:orientation="vertical">
+
+	<net.hcangus.widget.TitleBar
+		android:id="@id/titleBar"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/height_titlebar"/>
+
+	<ProgressBar
+		android:id="@+id/pb_loading"
+		style="@style/ProgressBar_Mini"
+		android:layout_width="match_parent"
+		android:layout_height="3dp"
+		android:max="100"/>
+
+	<net.hcangus.ptr.PtrFrameLayout
+		android:id="@+id/ptrFrame"
+		xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/c_bg_black"
+		cube_ptr:ptr_duration_to_close="200"
+		cube_ptr:ptr_duration_to_close_header="1000"
+		cube_ptr:ptr_keep_header_when_refresh="true"
+		cube_ptr:ptr_pull_to_fresh="false"
+		cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+		cube_ptr:ptr_resistance="1.7">
+		<WebView
+			android:id="@+id/webView"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:scrollbars="none"/>
+	</net.hcangus.ptr.PtrFrameLayout>
+</LinearLayout>

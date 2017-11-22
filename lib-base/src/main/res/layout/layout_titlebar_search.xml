@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/height_titlebar"
+				xmlns:app="http://schemas.android.com/apk/res-auto"
+				android:background="@color/c_bg_main">
+
+	<RelativeLayout
+		android:id="@+id/ly_title_bar_left"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"
+		android:background="@drawable/selector_common_bg"
+		android:gravity="center_vertical"
+		android:paddingLeft="12dp"
+		android:paddingRight="12dp">
+
+		<ImageView
+			android:id="@+id/iv_title_bar_left"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentStart="true"
+			android:contentDescription="@null"
+			android:focusable="false"
+			android:src="@mipmap/ic_back_public_white"/>
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:id="@+id/ly_title_bar_center"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginLeft="48dp"
+		android:layout_marginRight="48dp"
+		android:gravity="center">
+
+		<net.hcangus.widget.SearchEditText
+			android:id="@+id/et_search"
+			style="@style/editTextStyle"
+			android:textColorHint="@color/c_font_default"
+			android:paddingLeft="14dp"
+			android:paddingRight="14dp"
+			app:isIconLeft="true"
+			app:isAutoSearch="false"/>
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:id="@+id/ly_title_bar_right"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_alignParentEnd="true"
+		android:layout_alignParentRight="true"
+		android:background="@drawable/selector_common_bg"
+		android:paddingLeft="12dp"
+		android:paddingRight="12dp"
+		android:visibility="gone">
+
+		<ImageView
+			android:id="@+id/iv_title_bar_right"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:contentDescription="@null"
+			android:visibility="gone"/>
+
+		<TextView
+			android:id="@+id/tv_title_bar_right"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:textColor="@color/c_bg_white"
+			android:textSize="@dimen/s_small"
+			android:visibility="gone"/>
+
+	</RelativeLayout>
+
+</RelativeLayout>
