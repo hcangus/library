@@ -24,7 +24,7 @@ dependencies {
 
 ## 使用
 
-1. 相关初始化
+### 1. 相关初始化
 
 ```java
 //崩溃日志保存到SDCard
@@ -37,7 +37,7 @@ MyLogger.init("tag", BuildConfig.DEBUG);
 VolleyHandler.intializeRequestQueue(this);
 ```
 
-2. MyLogger
+### 2. MyLogger
 
 * 如要使用，在application里进行初始化：
 
@@ -60,7 +60,7 @@ MyLogger.init(String tag, final boolean debug)
  Logger.json(String)
  ```
 
-3. Banner
+### 3. Banner
 
 * 设置样式（setBannerStyle）
 
@@ -127,7 +127,7 @@ MyLogger.init(String tag, final boolean debug)
 
 * 使用方法
 
-Step 1.在布局文件中添加Banner，可以设置自定义属性
+Step 1. 在布局文件中添加Banner，可以设置自定义属性
 ！！！此步骤可以省略，直接在Activity或者Fragment中new Banner();
 
 ```xml
@@ -138,10 +138,10 @@ Step 1.在布局文件中添加Banner，可以设置自定义属性
     android:layout_height="高度自己设置" />
 ```
 
-Step 2.如有必要，重写图片加载器
+Step 2. 如有必要，重写图片加载器  
 [参考-GlideImageLoader](library/lib-base/src/main/java/net/hcangus/banner/loader/GlideImageLoader.java)
 
-Step 3.设置Banner
+Step 3. 设置Banner
 
 ```java
 int imgWidth = DeviceUtil.getScreenWidth(mContext);
@@ -171,7 +171,7 @@ banner.start();
 banner.update(List<T> imageUrls)
 ```
 
-Step 4.（可选）增加体验
+Step 4. （可选）增加体验
 
 ```java
 //如果你需要考虑更好的体验，可以这么操作
@@ -190,7 +190,7 @@ protected void onStop() {
 }
 ```
 
-4. PasswordView 密码输入框
+### 4. PasswordView 密码输入框
 
 ```xml
 <net.hcangus.password.PayEditText
