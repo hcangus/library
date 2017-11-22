@@ -139,7 +139,7 @@ Step 1. 在布局文件中添加Banner，可以设置自定义属性
 ```
 
 Step 2. 如有必要，重写图片加载器  
-[参考-GlideImageLoader](library/lib-base/src/main/java/net/hcangus/banner/loader/GlideImageLoader.java)
+[参考-GlideImageLoader](./lib-base/src/main/java/net/hcangus/banner/loader/GlideImageLoader.java)
 
 Step 3. 设置Banner
 
