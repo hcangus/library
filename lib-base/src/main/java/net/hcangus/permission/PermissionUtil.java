@@ -5,8 +5,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.PermissionChecker;
 import android.text.TextUtils;
 
 import net.hcangus.itf.Action;
@@ -23,7 +25,17 @@ import net.hcangus.util.DialogUtil;
 public class PermissionUtil {
 
 	public static boolean checkPermission(Activity activity, String permission) {
-		return ActivityCompat.checkSelfPermission(activity, permission) == PackageManager.PERMISSION_GRANTED;
+		boolean result;
+
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+			result = PermissionChecker.checkSelfPermission(activity, permission)
+					== PermissionChecker.PERMISSION_GRANTED;
+		} else {
+			result = ActivityCompat.checkSelfPermission(activity, permission)
+					== PackageManager.PERMISSION_GRANTED;
+		}
+
+		return result;
 	}
 
 	public static boolean requestPermission(@NonNull final Activity activity, @NonNull final String permission, final int requestCode) {

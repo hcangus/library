@@ -216,8 +216,8 @@ keyboard.setTarget(payEditText);
 * 当密码输入完成时的回调
 */
 payEditText.setOnInputFinishedListener(new PayEditText.OnInputFinishedListener() {
-@Override
-public void onInputFinished(String password) {
+    @Override
+    public void onInputFinished(String password) {
 
 }
 });
