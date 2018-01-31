@@ -609,6 +609,44 @@ public class DeviceUtil {
 		return null;
 	}
 
+	//进行图片裁剪
+	public static void cropPicture(Activity activity, String imgPath, int requestCode) {
+		Intent intent = new Intent("com.android.camera.action.CROP");//隐式启动
+		intent.setDataAndType(Uri.fromFile(new File(imgPath)), "image/*");
+		// crop为true是设置在开启的intent中设置显示的view可以剪裁
+		intent.putExtra("crop", "true");
+
+		// aspectX aspectY 是宽高的比例
+		intent.putExtra("aspectX", 1);
+		intent.putExtra("aspectY", 1);
+
+		// outputX,outputY 是剪裁图片的宽高
+		intent.putExtra("outputX", 300);
+		intent.putExtra("outputY", 300);
+		intent.putExtra("return-data", true);
+		intent.putExtra("noFaceDetection", true);// 取消人脸识别
+		activity.startActivityForResult(intent, requestCode);
+	}
+
+	//进行图片裁剪
+	public static void cropPicture(Activity activity, String imgPath, int outX, int outY, int requestCode) {
+		Intent intent = new Intent("com.android.camera.action.CROP");//隐式启动
+		intent.setDataAndType(Uri.fromFile(new File(imgPath)), "image/*");
+		// crop为true是设置在开启的intent中设置显示的view可以剪裁
+		intent.putExtra("crop", "true");
+
+		// aspectX aspectY 是宽高的比例
+		intent.putExtra("aspectX", 1);
+		intent.putExtra("aspectY", 1);
+
+		// outputX,outputY 是剪裁图片的宽高
+		intent.putExtra("outputX", outX);
+		intent.putExtra("outputY", outY);
+		intent.putExtra("return-data", true);
+		intent.putExtra("noFaceDetection", true);// 取消人脸识别
+		activity.startActivityForResult(intent, requestCode);
+	}
+
 	public enum LocalPathType {
 		logs,//存放日志
 		iCache,//存放上传图片的缓存，以.jp结尾
