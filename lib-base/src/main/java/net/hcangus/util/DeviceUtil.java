@@ -29,6 +29,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -212,7 +213,7 @@ public class DeviceUtil {
 		return context.getPackageManager().getPackageInfo(
 				context.getPackageName(), Context.MODE_PRIVATE).versionCode;
 	}
-	
+
 	/**
 	 * 获取程序名称
 	 */
@@ -479,12 +480,12 @@ public class DeviceUtil {
 		String packageName = context.getPackageName();
 		String directoryName = packageName.substring(packageName.indexOf(".") + 1, packageName.lastIndexOf("."));
 		if (isSdcardEnable()) {
-			appFilePath = Environment.getExternalStorageDirectory()+ File.separator
+			appFilePath = Environment.getExternalStorageDirectory() + File.separator
 					+ directoryName + File.separator;
 			createIfNotExist(appFilePath);
 			return appFilePath;
 		}
-		appFilePath = File.separator+ directoryName + File.separator;
+		appFilePath = File.separator + directoryName + File.separator;
 		createIfNotExist(appFilePath);
 		return appFilePath;
 	}
@@ -543,11 +544,11 @@ public class DeviceUtil {
 				FileWriter writer = new FileWriter(file);
 				writer.write(content);
 				writer.close();
-				Log.i("DeviceUtil","<<" + fileName + ">>文件保存成功");
+				Log.i("DeviceUtil", "<<" + fileName + ">>文件保存成功");
 				isSuccess = true;
 			} catch (IOException e) {
 				e.printStackTrace();
-				Log.e("DeviceUtil","<<" + fileName + ">>文件保存失败");
+				Log.e("DeviceUtil", "<<" + fileName + ">>文件保存失败");
 				isSuccess = false;
 			}
 		}
@@ -561,10 +562,10 @@ public class DeviceUtil {
 			try {
 				BufferedReader reader = new BufferedReader(new FileReader(file));
 				content = reader.readLine();
-				Log.i("DeviceUtil","<<" + fileName + ">>文件读取成功，内容=" + content);
+				Log.i("DeviceUtil", "<<" + fileName + ">>文件读取成功，内容=" + content);
 			} catch (Exception e) {
 				e.printStackTrace();
-				Log.e("DeviceUtil","<<" + fileName + ">>文件读取失败");
+				Log.e("DeviceUtil", "<<" + fileName + ">>文件读取失败");
 			}
 		}
 		return content;
@@ -584,7 +585,7 @@ public class DeviceUtil {
 			activity.startActivityForResult(intent, requestCode);
 			return new File(pathname);
 		} catch (ActivityNotFoundException e) {
-			Toast.makeText(activity,"该手机摄像头存在问题！",Toast.LENGTH_SHORT).show();
+			Toast.makeText(activity, "该手机摄像头存在问题！", Toast.LENGTH_SHORT).show();
 		}
 		return null;
 	}
@@ -604,12 +605,14 @@ public class DeviceUtil {
 			fragment.startActivityForResult(intent, requestCode);
 			return new File(pathname);
 		} catch (ActivityNotFoundException e) {
-			Toast.makeText(fragment.getContext(),"该手机摄像头存在问题！",Toast.LENGTH_SHORT).show();
+			Toast.makeText(fragment.getContext(), "该手机摄像头存在问题！", Toast.LENGTH_SHORT).show();
 		}
 		return null;
 	}
 
 	//进行图片裁剪
+	//   onActivityResult:
+	//   Bitmapt bitmap = data.getParcelableExtra("data")
 	public static void cropPicture(Activity activity, String imgPath, int requestCode) {
 		Intent intent = new Intent("com.android.camera.action.CROP");//隐式启动
 		intent.setDataAndType(Uri.fromFile(new File(imgPath)), "image/*");
@@ -629,19 +632,21 @@ public class DeviceUtil {
 	}
 
 	//进行图片裁剪
-	public static void cropPicture(Activity activity, String imgPath, int outX, int outY, int requestCode) {
+	//   onActivityResult:
+	//   Bitmapt bitmap = data.getParcelableExtra("data")
+	public static void cropPicture(Activity activity, String imgPath, int aspectX, int aspectY, int requestCode) {
 		Intent intent = new Intent("com.android.camera.action.CROP");//隐式启动
 		intent.setDataAndType(Uri.fromFile(new File(imgPath)), "image/*");
 		// crop为true是设置在开启的intent中设置显示的view可以剪裁
 		intent.putExtra("crop", "true");
 
 		// aspectX aspectY 是宽高的比例
-		intent.putExtra("aspectX", 1);
-		intent.putExtra("aspectY", 1);
+		intent.putExtra("aspectX", aspectX);
+		intent.putExtra("aspectY", aspectY);
 
 		// outputX,outputY 是剪裁图片的宽高
-		intent.putExtra("outputX", outX);
-		intent.putExtra("outputY", outY);
+		intent.putExtra("outputX", aspectX * 100);
+		intent.putExtra("outputY", aspectY * 100);
 		intent.putExtra("return-data", true);
 		intent.putExtra("noFaceDetection", true);// 取消人脸识别
 		activity.startActivityForResult(intent, requestCode);
