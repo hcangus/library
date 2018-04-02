@@ -94,7 +94,7 @@ public class WebActivity extends BaseActivity {
 		ptrFrame.setDurationToCloseHeader(1500);
 		ptrFrame.setHeaderView(materialHeader);
 		ptrFrame.addPtrUIHandler(materialHeader);
-		ptrFrame.setPinContent(false);
+		ptrFrame.setPinContent(true);
 
 		ptrFrame.setPtrHandler(new PtrHandler() {
 			@Override
@@ -147,7 +147,7 @@ public class WebActivity extends BaseActivity {
 	private class MWebViewClient extends WebViewClient {
 		@Override
 		public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-			return true;
+			return false;
 		}
 
 		@Override

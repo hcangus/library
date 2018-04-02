@@ -70,7 +70,7 @@ public class PtrAutoLoadRecyclerView extends LinearLayout {
 		ptrFrame.setDurationToCloseHeader(1500);
 		ptrFrame.setHeaderView(materialHeader);
 		ptrFrame.addPtrUIHandler(materialHeader);
-		ptrFrame.setPinContent(false);
+		ptrFrame.setPinContent(true);
 
 		recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
 

@@ -64,6 +64,7 @@ public class AutoLoadRecyclerView extends RecyclerView {
 	private AutoLoadListener autoLoadListener;
 	private EndlessRecyclerOnScrollListener scrollListener;
 	private HeaderFooterRecyclerAdapter headerAndFooterAdapter;
+	private boolean canAutoLoad = true;
 
 	public AutoLoadRecyclerView(Context context) {
 		this(context, null, 0);
@@ -152,6 +153,7 @@ public class AutoLoadRecyclerView extends RecyclerView {
 	 * 设置是否能自动加载
 	 */
 	public void setCanAutoLoad(boolean isAutoLoad) {
+		this.canAutoLoad = isAutoLoad;
 		if (scrollListener != null) {
 			scrollListener.setCanAutoLoad(isAutoLoad);
 		}
@@ -214,7 +216,7 @@ public class AutoLoadRecyclerView extends RecyclerView {
 	public void hasMore(final boolean hasMore) {
 		setCanLoad(hasMore);
 		final LoadingFooter footer = getFootView();
-		if (footer != null) {
+		if (footer != null && canAutoLoad) {
 			int recyclerLastVisible = RecyclerViewUtils.getRecyclerLastVisible(this);
 			if (recyclerLastVisible < 0) {
 				getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {

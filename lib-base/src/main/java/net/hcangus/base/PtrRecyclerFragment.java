@@ -28,7 +28,6 @@ public abstract class PtrRecyclerFragment<E, V extends View_PtrList<E>> extends 
 
 	protected PtrAutoLoadRecyclerView ptrAutoLoadRecyclerView;
 	protected CommonRecyclerAdapter<E, ? extends RecyclerView.ViewHolder> adapter;
-	protected boolean isFirst = true;
 
 	/*创建控制器*/
 	protected abstract PtrListPresent<E, V> createListPresent(Context context);
@@ -59,6 +58,10 @@ public abstract class PtrRecyclerFragment<E, V extends View_PtrList<E>> extends 
 		ptrAutoLoadRecyclerView.setCanRefresh(canRefresh);
 	}
 
+	public void setCanAutoload(boolean canAutoload) {
+		ptrAutoLoadRecyclerView.setCanAutoLoad(canAutoload);
+	}
+
 	public AutoLoadRecyclerView getRecyclerView() {
 		return ptrAutoLoadRecyclerView == null ? null : ptrAutoLoadRecyclerView.getRecyclerView();
 	}
@@ -87,7 +90,7 @@ public abstract class PtrRecyclerFragment<E, V extends View_PtrList<E>> extends 
 
 	@Override
 	public void onRefreshComplete(List<E> list) {
-		isFirst = false;
+		isFirstLoad = false;
 		if (ptrAutoLoadRecyclerView != null) {
 			ptrAutoLoadRecyclerView.onRefreshComplete();
 		}

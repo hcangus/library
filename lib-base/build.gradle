@@ -22,23 +22,22 @@ android {
 }
 
 dependencies {
-	compile fileTree(include: ['*.jar'], dir: 'libs')
-	compile 'com.android.support:appcompat-v7:25.4.0'
-	testCompile 'junit:junit:4.12'
-	compile 'com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE'
-	compile 'com.android.support:recyclerview-v7:25.4.0'
-	compile 'com.android.support:design:25.4.0'
+	api fileTree(include: ['*.jar'], dir: 'libs')
+	api 'com.android.support:appcompat-v7:25.4.0'
+	api 'com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE'
+	api 'com.android.support:recyclerview-v7:25.4.0'
+	api 'com.android.support:design:25.4.0'
 	//	网络请求
-	compile 'com.android.volley:volley:1.0.0'
+	api 'com.android.volley:volley:1.1.0'
 	//  Gson
-	compile 'com.google.code.gson:gson:2.8.0'
+	api 'com.google.code.gson:gson:2.8.0'
 	//	butterknife
-	compile 'com.jakewharton:butterknife:8.5.1'
+	api 'com.jakewharton:butterknife:8.5.1'
 	annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
 	//Glide & transformation
-	compile 'com.github.bumptech.glide:glide:3.8.0'
-	compile 'jp.wasabeef:glide-transformations:2.0.2'
+	api 'com.github.bumptech.glide:glide:3.8.0'
+	api 'jp.wasabeef:glide-transformations:2.0.2'
 	//拼音工具
-	compile 'com.github.stuxuhai:jpinyin:1.1.8'
-	compile 'com.orhanobut:logger:2.1.1'
+	api 'com.github.stuxuhai:jpinyin:1.1.8'
+	api 'com.orhanobut:logger:2.1.1'
 }
